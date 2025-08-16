@@ -7,6 +7,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { on } from "events";
 
 interface NavbarItem {
   href: string;
@@ -32,6 +33,7 @@ const NavbarSidebar = ({ items, onOpenChange, open }: Props) => {
               className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
               key={item.href}
               href={item.href}
+              onClick={() => onOpenChange(false)}
             >
               {item.children}
             </Link>
@@ -39,6 +41,7 @@ const NavbarSidebar = ({ items, onOpenChange, open }: Props) => {
           <div className="border-t">
             <Link
               href="/sign-in"
+              onClick={() => onOpenChange(false)}
               className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
             >
               {" "}
@@ -46,6 +49,7 @@ const NavbarSidebar = ({ items, onOpenChange, open }: Props) => {
             </Link>
             <Link
               href="/sign-up"
+              onClick={() => onOpenChange(false)}
               className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
             >
               Start Selling
