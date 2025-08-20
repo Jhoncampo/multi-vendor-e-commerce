@@ -1,4 +1,4 @@
-import type { CollectionConfig } from "payload";
+import type { CollectionConfig, CollectionSlug } from "payload";
 
 const Categories: CollectionConfig = {
     slug: 'categories',
@@ -31,6 +31,7 @@ const Categories: CollectionConfig = {
             collection: "categories",
             on: "parent",
             hasMany: true
+
         }
     ]
 }
