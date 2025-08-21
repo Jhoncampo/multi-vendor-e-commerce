@@ -10,7 +10,8 @@
     "lint": "next lint",
     "generate:types": "payload generate:types",
     "db:fresh": "payload migrate:fresh",
-    "db:seed": "payload run src/seed.ts"
+    "db:seed": "payload run src/seed.ts",
+    "db:reset": "payload run db:fresh && payload run db:seed"
   },
   "dependencies": {
     "@payloadcms/db-mongodb": "^3.52.0",
